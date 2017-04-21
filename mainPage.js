@@ -10,7 +10,8 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -33.8688, lng: 151.2195},
           zoom: 13,
-          mapTypeId: 'roadmap'
+          mapTypeId: 'roadmap',
+          disableDefaultUI: true
         });
 
         // Create the search box and link it to the UI element.
@@ -72,23 +73,22 @@
           map.fitBounds(bounds);
         });
       }
-function left() 
+rightArrow.addEventListener("click", function left() 
 {
     document.getElementById("rightArrow").style.display="none";
     document.getElementById("leftArrow").style.display="block";
     document.getElementById("left-panel").style.left="-4%";
     document.getElementById("leftButt").style.display="none";  
     document.getElementById("rightButt").style.display="block";
-};
+    alert('sadas');
+});
 
-function right() 
+leftArrow.addEventListener("click", function right() 
 {
     document.getElementById("rightArrow").style.display="block";
     document.getElementById("leftArrow").style.display="none";
     document.getElementById("left-panel").style.left="-20%";
     document.getElementById("rightButt").style.display="none";
-    
+    alert('sadas');
     document.getElementById("leftButt").style.display="block";
-};
-
-    
+});
